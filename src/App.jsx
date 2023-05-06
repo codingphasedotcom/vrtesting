@@ -25,6 +25,7 @@ function App() {
     >
       <XR>
       <Experience />
+      <Controllers />
       </XR>
     </Canvas>
     
