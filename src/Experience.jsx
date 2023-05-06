@@ -3,33 +3,14 @@ import {
   TransformControls,
   Center,
   OrbitControls,
-  MeshReflectorMaterial
+  MeshReflectorMaterial,
 } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { useController } from '@react-three/xr'
 import { Ground } from "./Ground";
 
 
 export function Experience() {
   const cubeRef = useRef();
-  const leftController = useController('left')
-  const rightController = useController('right')
-
-  useFrame((state, delta, XRFrame) => {
-    console.log('testing')
-    if (XRFrame) {
-      if (rightController) {
-        const rightGamePad = rightController.inputSource.gamepad
-
-       /* right joystick values are stored in rightGamePad.axes */
-      }
-      if (leftController) {
-        const leftGamePad = leftController.inputSource.gamepad
-        /* left joystick values are stored in leftGamePad.axes */
-      }
-    }
-  })
   // useFrame((state, delta) => {
 
   // });
