@@ -2,10 +2,13 @@ import { StrictMode, useState } from "react";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./Experience.jsx";
+import { VRButton, ARButton, XR, Controllers, Hands } from '@react-three/xr'
 
 function App() {
   return (
     <StrictMode>
+      <VRButton /> 
+      
     <Canvas
       // flat
       // orthographic
@@ -20,8 +23,11 @@ function App() {
         position: [0, 2, 6],
       }}
     >
+      <XR>
       <Experience />
+      </XR>
     </Canvas>
+    
     </StrictMode>
   );
 }
