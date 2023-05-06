@@ -23,7 +23,7 @@ function App() {
         position: [0, 2, 6],
       }}
     >
-      <XR>
+      <XR frameRate={120}>
       <Experience />
       <Controllers />
       </XR>
